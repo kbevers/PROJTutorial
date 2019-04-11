@@ -1,0 +1,64 @@
+<gie>
+
+###############################################################################
+
+                                The UTM Projection
+
+###############################################################################
+
+
+1. Set up a UTM projection for use in Estonia.
+-------------------------------------------------------------------------------
+Hints:
+
+  * Consult the documentation at
+    https://proj4.org/operations/projections/utm.html
+-------------------------------------------------------------------------------
+
+operation   <your answer here>
+tolerance   1 cm
+
+accept      24.745          56.437       # Talinn, Estonia
+expect      1099762.06      6297385.25
+-------------------------------------------------------------------------------
+
+
+
+2. Set up a UTM projection for use on the North Island of New Zealand
+-------------------------------------------------------------------------------
+Hints:
+
+  * Consult the documentation at
+    https://proj4.org/operations/projections/utm.html
+
+-------------------------------------------------------------------------------
+
+operation   <your answer here>
+tolerance   1 cm
+
+accept      174.740        -36.841      # Auckland, New Zealand
+expect      298481.34       5920382.04
+-------------------------------------------------------------------------------
+
+
+
+3. Set up a UTM projection based on the Hayford ellipsoid for use in Estonia
+-------------------------------------------------------------------------------
+Hints:
+
+  * Consult the documentation at
+    https://proj4.org/operations/projections/utm.html
+
+  *  A list of available ellipsoids can be seen by running the command:
+
+        proj -le
+
+-------------------------------------------------------------------------------
+operation   <your answer here>
+tolerance   1 cm
+
+accept      24.745          56.437       # Talinn, Estonia
+expect      1099791.59      6297526.33
+-------------------------------------------------------------------------------
+
+</gie>
