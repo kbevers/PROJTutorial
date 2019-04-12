@@ -1,0 +1,151 @@
+<gie>
+
+###############################################################################
+
+                       The Lambert Conic Conformal projection
+
+In this exercise we will introduce the Lambert Conic Conformal (LCC) projection as
+well as general map projection concepts such as projection center, scale
+factor, false easting/northing and ellipsoid models.
+
+We will do so by defining various version of the LCC optimised for use in and
+around the Gulf of Finland.
+
+In case you are not familiar with the LCC projection, Wikipedia [0] describes
+the Lambert Conic Conformal projection as:
+
+"A Lambert conformal conic projection (LCC) is a conic map projection used for
+aeronautical charts, portions of the State Plane Coordinate System, and many
+national and regional mapping systems. It is one of seven projections introduced
+by Johann Heinrich Lambert in his 1772 publication Anmerkungen und Zusätze zur
+Entwerfung der Land- und Himmelscharten (Notes and Comments on the Composition
+of Terrestrial and Celestial Maps).
+
+Conceptually, the projection seats a cone over the sphere of the Earth and
+projects the surface conformally onto the cone. The cone is unrolled, and the
+parallel that was touching the sphere is assigned unit scale. That parallel is
+called the reference parallel or standard parallel.
+
+By scaling the resulting map, two parallels can be assigned unit scale, with
+scale decreasing between the two parallels and increasing outside them. This
+gives the map two standard parallels. In this way, deviation from unit scale can
+be minimized within a region of interest that lies largely between the two
+standard parallels. Unlike other conic projections, no true secant form of the
+projection exists because using a secant cone does not yield the same scale
+along both standard parallels"
+
+[0] https://en.wikipedia.org/wiki/Lambert_conformal_conic_projection
+
+###############################################################################
+
+
+1. Set up a LCC projection with one standard parallel placed halfway between
+   Helsinki and Talinn.
+-------------------------------------------------------------------------------
+Hints:
+
+    - The middle point between Helsinki and Talinn is roughly placed at
+      59.8N 24.8E
+
+    - The PROJ documentation for LCC is found at
+      https://proj4.org/operations/projections/lcc.html
+
+-------------------------------------------------------------------------------
+
+operation   +proj=lcc +lat_1=59.8
+#operation   <your answer here>
+tolerance   1 cm
+
+accept      24.938              60.171  # Helsinki
+expect      1351962.01          298663.54
+
+accept      24.745              59.437  # Talinn
+expect      1371811.19          218598.22
+-------------------------------------------------------------------------------
+
+
+2. Set up a similar LCC projection, this time using two standard parallels.
+   The first passing through Helsinki, the second through Talinn.
+-------------------------------------------------------------------------------
+Hints:
+
+    - Approximate location of Helsinki:     60.171N 24.938E
+    - Approximate location of Talinn:       59.437N 24.745E
+-------------------------------------------------------------------------------
+
+operation   +proj=lcc +lat_1=59.437 +lat_2=60.171
+#operation   <your answer here>
+tolerance   1 cm
+
+accept      24.8                59.8
+expect      1359907.80          8024082.260
+------------------------------------------------------------------------------
+
+
+
+3. Improve the distance distortion of the projection.
+------------------------------------------------------------------------------
+   The projection defined above has no angular distortions but there is a
+   minor distortion of distances. This can't be avoided but locally distortions
+   can be minimized by adjusting the scale factor. With the default scaling
+   factor 1 the distance error for the point midway between Helsinki and Talinn
+   is around 0.002%. This is already quite good but can be improved to roughly
+   4.5e-5%, making the distance error more or less insignificat.
+
+   Find the optimal scaling factor by trial and error using the proj
+   application.
+
+Hints:
+
+    - Modify and use the command below to find a better scaling factor:
+
+.           echo 24.8 59.8 | proj -V <your projection setup here>
+
+    - Look for the lines discplaying the meridian and parallel scale.
+    - Consult the LCC documentation to find out how to set the scaling factor.
+    - Scaling factors usually deviates from unity by the order of 1e-3 to 1e-5
+------------------------------------------------------------------------------
+operation   +proj=lcc +lat_1=59.437 +lat_2=60.171 +k_0=1.00002
+#operation   <your answer here>
+tolerance   1 um
+
+accept      24.8                59.8
+expect      1359935.004194615   8024242.742128853
+------------------------------------------------------------------------------
+
+4. Change the projection center to the midway point between Helsinki and Talinn
+------------------------------------------------------------------------------
+    By changing the projection center we move the oirio of the output
+    coordinates to be coinciding with the position where the projection is
+    most accurate.
+
+Hints:
+
+    - The midway point between Helsinki and Talinn is roughly 59.8N 24.8E
+    - The LCC documentation explains how to change the projection center
+
+------------------------------------------------------------------------------
+operation   +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8
+#operation   <your answer here>
+
+accept      24.8            59.8
+expect       0.0             0.0
+------------------------------------------------------------------------------
+
+
+5. Introduce false eastings and northings
+------------------------------------------------------------------------------'
+    Oftentimes it is preferable to keep coordinate values positive even when
+    moving west and south of the projection center. This can be achieved by
+    introducing false easting and northing. Add false easting and northing
+    of 1000000
+
+------------------------------------------------------------------------------
+operation   +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8 +x_0=1000000 +y_0=1000000
+#operation   <your answer here>
+
+accept      24.8            59.8
+expect      1000000.00      1000000.00
+------------------------------------------------------------------------------
+
+</gie>
