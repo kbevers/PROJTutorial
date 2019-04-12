@@ -52,8 +52,7 @@ Hints:
 
 -------------------------------------------------------------------------------
 
-operation   +proj=lcc +lat_1=59.8
-#operation   <your answer here>
+operation   <your answer here>
 tolerance   1 cm
 
 accept      24.938              60.171  # Helsinki
@@ -72,9 +71,7 @@ Hints:
     - Approximate location of Helsinki:     60.171N 24.938E
     - Approximate location of Talinn:       59.437N 24.745E
 -------------------------------------------------------------------------------
-
-operation   +proj=lcc +lat_1=59.437 +lat_2=60.171
-#operation   <your answer here>
+operation   <your answer here>
 tolerance   1 cm
 
 accept      24.8                59.8
@@ -105,8 +102,7 @@ Hints:
     - Consult the LCC documentation to find out how to set the scaling factor.
     - Scaling factors usually deviates from unity by the order of 1e-3 to 1e-5
 ------------------------------------------------------------------------------
-operation   +proj=lcc +lat_1=59.437 +lat_2=60.171 +k_0=1.00002
-#operation   <your answer here>
+operation   <your answer here>
 tolerance   1 um
 
 accept      24.8                59.8
@@ -125,8 +121,8 @@ Hints:
     - The LCC documentation explains how to change the projection center
 
 ------------------------------------------------------------------------------
-operation   +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8
-#operation   <your answer here>
+operation   <your answer here>
+tolerance   1 cm
 
 accept      24.8            59.8
 expect       0.0             0.0
@@ -140,9 +136,12 @@ expect       0.0             0.0
     introducing false easting and northing. Add false easting and northing
     of 1000000
 
+Hints:
+
+    - The LCC documentation explains how to set false easting/northing
 ------------------------------------------------------------------------------
-operation   +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8 +x_0=1000000 +y_0=1000000
-#operation   <your answer here>
+operation   <your answer here>
+tolerance   1 cm
 
 accept      24.8            59.8
 expect      1000000.00      1000000.00
