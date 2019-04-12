@@ -19,7 +19,7 @@ operation   <your answer here>
 tolerance   1 cm
 
 accept      24.745          56.437       # Talinn, Estonia
-expect      1099762.06      6297385.25
+expect      360965.59       6256998.56
 -------------------------------------------------------------------------------
 
 
@@ -58,7 +58,7 @@ operation   <your answer here>
 tolerance   1 cm
 
 accept      24.745          56.437       # Talinn, Estonia
-expect      1099791.59      6297526.33
+expect      360958.75       6257137.65
 -------------------------------------------------------------------------------
 
 </gie>

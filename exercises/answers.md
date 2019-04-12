@@ -3,7 +3,7 @@
 ## Projections.1: UTM
 
 ```
-1.      +proj=utm +zone=33
+1.      +proj=utm +zone=35
 2.      +proj=utm +zone=60 +south
-3.      +proj=utm +zone=33 +ellps=intl
+3.      +proj=utm +zone=35 +ellps=intl
 ```
