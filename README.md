@@ -30,10 +30,15 @@ What is the scope of the tutorial? Here's some suggestions:
 
 ## Program
 
+*Preliminary schedule - subject to changes*
+
 - 12:00 - 13:00   Lunch
 - 13:00 - 13:45   Introduction to PROJ, Kristian Evers
-- 13:45 - ?????   ???
+- 13:45 - 14:15   ETRS89 Transformations in Fennoscandia, Pasi Häkli
+- 14:15 - 14:45   Dynamic reference frame in Iceland, Gudmundur Valsson
+- 14:45 - 15:15   Coffee break
 - ????? - ?????   ???
+- 16:00 - 1800    Practical exercises, Kristian Evers
 
 ## Installation
 
