@@ -57,7 +57,7 @@ tolerance   1 cm
 accept      24.938              60.171  # Helsinki
 expect      1351962.01          298663.54
 
-accept      24.745              59.437  # Talinn
+accept      24.745              59.437  # Tallinn
 expect      1371811.19          218598.22
 -------------------------------------------------------------------------------
 
@@ -103,7 +103,7 @@ expect      1371783.759883408	218593.850591891
 
 
 3. Set up a similar LCC projection, this time using two standard parallels.
-   The first passing through Helsinki, the second through Talinn.
+   The first passing through Helsinki, the second through Tallinn.
 -------------------------------------------------------------------------------
 Hints:
 
@@ -119,7 +119,7 @@ expect      1359907.80          8024082.260
 
 
 
-4. Change the projection center to the midway point between Helsinki and Talinn
+4. Change the projection center to the midway point between Helsinki and Tallinn
 ------------------------------------------------------------------------------
     By changing the projection center we move the origin of the output
     coordinates to be coinciding with the position where the projection is
@@ -128,7 +128,7 @@ expect      1359907.80          8024082.260
 Hints:
 
     - Start with the projection you designed in exercise 1 above
-    - The mid point between Helsinki and Talinn is roughly 59.8N 24.8E
+    - The mid point between Helsinki and Tallinn is roughly 59.8N 24.8E
     - The LCC documentation explains how to change the projection center
 
 ------------------------------------------------------------------------------
