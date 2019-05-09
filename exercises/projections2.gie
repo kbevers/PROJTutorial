@@ -1,14 +1,12 @@
-<gie>
-
 ###############################################################################
 
                        The Lambert Conic Conformal projection
 
-In this exercise we will introduce the Lambert Conic Conformal (LCC) projection as
-well as general map projection concepts such as projection center, scale
+In this exercise we will introduce the Lambert Conic Conformal (LCC) projection
+as well as general map projection concepts such as projection center, scale
 factor, false easting/northing and ellipsoid models.
 
-We will do so by defining various version of the LCC optimised for use in and
+We will do so by defining various versions of the LCC optimised for use in and
 around the Gulf of Finland.
 
 In case you are not familiar with the LCC projection, Wikipedia [0] describes
@@ -37,15 +35,16 @@ along both standard parallels"
 [0] https://en.wikipedia.org/wiki/Lambert_conformal_conic_projection
 
 ###############################################################################
-
+<gie>
 
 1. Set up a LCC projection with one standard parallel placed halfway between
-   Helsinki and Talinn.
+   Helsinki and Tallinn.
 -------------------------------------------------------------------------------
 Hints:
 
-    - The middle point between Helsinki and Talinn is roughly placed at
-      59.8N 24.8E
+    - Approximate location of Helsinki:                    60.171N 24.938E
+    - Approximate location of Tallinn:                     59.437N 24.745E
+    - Approximate mid point between Helsinki and Tallinn:  59.8N   24.8E
 
     - The PROJ documentation for LCC is found at
       https://proj4.org/operations/projections/lcc.html
@@ -58,13 +57,53 @@ tolerance   1 cm
 accept      24.938              60.171  # Helsinki
 expect      1351962.01          298663.54
 
-accept      24.745              59.437  # Talinn
+accept      24.745              59.437  # Tallinn
 expect      1371811.19          218598.22
 -------------------------------------------------------------------------------
 
 
-2. Set up a similar LCC projection, this time using two standard parallels.
-   The first passing through Helsinki, the second through Talinn.
+
+2. Improve the distance distortion of the projection.
+------------------------------------------------------------------------------
+   The projection defined above is conformal, i.e. has no angular distortions
+   for infinitesimal objects - but there is a minor distortion of distances.
+   This cannot be avoided in general, but locally distortions can be minimized
+   by adjusting the scale factor.
+
+   With the default factor of 1, the distance error is 0  for (infinitesimal)
+   line segments at the latitude of the standard parallel.
+
+   By reducing the scale factor, the line of zero distance distortion degenerates
+   into two lines, north and south of the standard parallel.
+
+   For the abovementioned point in Tallinn, the distance error is around 0.002%,
+   but this can be reduced to zero by varying the scaling factor.
+
+   Even by trial and error it is not hard to reduce it to a few millionths of a
+   percent. So try to find a more optimal scaling factor by trial and error using
+   the projection analysis functionality of the proj application.
+
+Hints:
+
+    - Modify and use the command below to find a better scaling factor:
+
+.           echo 24.745 59.437 | proj -V <your projection setup here>
+
+    - Look for the lines displaying the meridian and parallel scale.
+    - Consult the LCC documentation to find out how to set the scaling factor.
+    - Scaling factors usually deviates from unity by the order of 1e-3 to 1e-5
+------------------------------------------------------------------------------
+operation   <your answer here>
+tolerance   1 um
+
+accept      24.745              59.437
+expect      1371783.759883408	218593.850591891
+------------------------------------------------------------------------------
+
+
+
+3. Set up a similar LCC projection, this time using two standard parallels.
+   The first passing through Helsinki, the second through Tallinn.
 -------------------------------------------------------------------------------
 Hints:
 
@@ -80,44 +119,16 @@ expect      1359907.80          8024082.260
 
 
 
-3. Improve the distance distortion of the projection.
+4. Change the projection center to the midway point between Helsinki and Tallinn
 ------------------------------------------------------------------------------
-   The projection defined above has no angular distortions but there is a
-   minor distortion of distances. This can't be avoided but locally distortions
-   can be minimized by adjusting the scale factor. With the default scaling
-   factor 1 the distance error for the point midway between Helsinki and Talinn
-   is around 0.002%. This is already quite good but can be improved to roughly
-   4.5e-5%, making the distance error more or less insignificat.
-
-   Find the optimal scaling factor by trial and error using the proj
-   application.
-
-Hints:
-
-    - Modify and use the command below to find a better scaling factor:
-
-.           echo 24.8 59.8 | proj -V <your projection setup here>
-
-    - Look for the lines discplaying the meridian and parallel scale.
-    - Consult the LCC documentation to find out how to set the scaling factor.
-    - Scaling factors usually deviates from unity by the order of 1e-3 to 1e-5
-------------------------------------------------------------------------------
-operation   <your answer here>
-tolerance   1 um
-
-accept      24.8                59.8
-expect      1359935.004194615   8024242.742128853
-------------------------------------------------------------------------------
-
-4. Change the projection center to the midway point between Helsinki and Talinn
-------------------------------------------------------------------------------
-    By changing the projection center we move the oirio of the output
+    By changing the projection center we move the origin of the output
     coordinates to be coinciding with the position where the projection is
     most accurate.
 
 Hints:
 
-    - The midway point between Helsinki and Talinn is roughly 59.8N 24.8E
+    - Start with the projection you designed in exercise 1 above
+    - The mid point between Helsinki and Tallinn is roughly 59.8N 24.8E
     - The LCC documentation explains how to change the projection center
 
 ------------------------------------------------------------------------------
