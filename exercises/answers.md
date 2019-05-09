@@ -12,10 +12,10 @@
 
 ```
 1.      +proj=lcc +lat_1=59.8
-2.      +proj=lcc +lat_1=59.437 +lat_2=60.171
-3.      +proj=lcc +lat_1=59.437 +lat_2=60.171 +k_0=1.00002
-4.     +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8
-5.      +proj=lcc +lat_2=59.437 +lat_1=60.171 +k_0=1.00002 +lon_0=24.8 +lat_0=59.8 +x_0=1000000 +y_0=1000000
+2.      +proj=lcc +lat_1=59.8   +k_0=0.99998
+3.      +proj=lcc +lat_1=59.437 +lat_2=60.171
+4.      +proj=lcc +lat_1=59.8   +lat_0=59.8   +lon_0=24.8
+5.      +proj=lcc +lat_1=59.8   +lat_0=59.8   +lon_0=24.8  +x_0=1000000 +y_0=1000000
 ```
 
 ## Projections.3: Tranverse Mercator
