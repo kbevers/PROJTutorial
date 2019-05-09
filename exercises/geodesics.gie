@@ -150,7 +150,7 @@ Consider these aspects:
 2. geod includes functionality for computing intermediate points along a
    geodesic. Check the manual ([1] above), especially the description of the
    "n_S" option, and try to compute the geodesic mid point directly, by
-   setting n_S=3.
+   setting n_S=2.
 
 3. One should actually expect the result of meditation 2 above to be slightly
    superior to the result obtained in the exercise. Why?
