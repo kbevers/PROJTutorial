@@ -10,7 +10,7 @@ model which we will familiarize ourselves with in this set of exercises.
 
 We will be using the Mercator projection to illustrate the different ellipsoid
 settings. Note that ALL for all projections and some transformations the
-ellipsoid can be changed using the same parameter names. 
+ellipsoid can be changed using the same parameter names.
 
 ###############################################################################
 
@@ -49,7 +49,7 @@ expect      2754709.2020    8238786.4803
 -------------------------------------------------------------------------------
 
 
-3. Specify the Hayford ellipsoid by it's semimajor axis radius and inverse
+3. Specify the Hayford ellipsoid by its semimajor axis radius and inverse
    flattening
 -------------------------------------------------------------------------------
 Hints:

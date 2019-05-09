@@ -23,7 +23,7 @@ An annotated answer could look like this:
 
 ```
 <gie>
-operation   +proj=merc      # The latlon "projection" returns the same output as
+operation   +proj=latlon    # The latlon "projection" returns the same output as
                             # given in the input
 tolerance   10 mm
 
