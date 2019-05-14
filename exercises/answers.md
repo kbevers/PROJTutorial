@@ -84,4 +84,53 @@ Meditations:
 ```
 1.      +proj=hgridshift +grids=BETA2007.gsb
 2.      +proj=vgridshift +grids=egm96_15.gtx
+```
 
+## Pipelines:
+
+```
+1.      +proj=pipeline +ellps=GRS80
+        +step +proj=cart
+        +step +proj=helmert +x=100 +y=200 +z=300 +convention=position_vector
+        +step +inv +proj=cart
+
+2.      +proj=pipeline
+        +step +proj=hgridshift +grids=BETA2007.gsb
+        +step +proj=vgridshift +grids=egm96_15.gtx
+
+    a:  In principle, yes - practically, no.
+    b:  Which grids is applied first depends on how the systems are defined.
+        If a geoid model is fitted to a certain datum, you need to make sure that
+        the input to the vgridshift operation is in that datum. That is your
+        responsibility to check - PROJ can't figure that out on its own. In this
+        case, the EGM96 geoid is fitted to WGS84. The BETA2007 grid results in
+        ETRS89 coordinates which for all but the most high accuracy application
+        can be regarded as equvialent to WGS84. Hence we do the horizontal grid
+        shift first.
+
+3.      +proj=pipeline
+        +step +inv +proj=utm +zone=32
+        +step +proj=cart +ellps=intl
+        +step +proj=helmert +x=-81.1 +y=-89.4 +z=-115.8
+            +rx=0.485 +ry=0.024 +rz=0.413 +s=-0.54 +convention=position_vector
+        +step +inv +proj=cart +ellps=GRS80
+        +step +proj=utm +zone=33
+
+
+n.      +proj=pipeline
+        +step +proj=axisswap +order=2,1
+        +step +proj=unitconvert +xy_in=deg +xy_out=rad
+        +step +proj=push +v_3 +step +proj=cart +ellps=bessel
+        +step +proj=helmert +x=598.1 +y=73.7 +z=418.2
+              +rx=0.202 +ry=0.045 +rz=-2.455 +s=6.7 +convention=position_vector
+        +step +inv +proj=cart +ellps=GRS80
+        +step +proj=pop +v_3
+        +step +proj=unitconvert +xy_in=rad +xy_out=deg
+        +step +proj=axisswap +order=2,1
+
+    a:  Latitude (deg), longitude (deg), height (m)
+    b:  Latitude (deg), longitude (deg), height (m)
+    c:  Retain the original height of the input coordinate:
+            Without the push/pop steps the height would be affected by
+            the Helmert step.
+```
