@@ -1,5 +1,3 @@
-<gie>
-
 ###############################################################################
 
                        The Helmert transformation
@@ -20,6 +18,7 @@ transformation setup.
 [1] https://proj4.org/operations/transformations/helmert.html
 
 ###############################################################################
+<gie>
 
 
 1. Simple coordinate translation
@@ -30,7 +29,7 @@ the x-, y- and z-components of the coordinate. This is rarely a good fit for
 large areas but locally a 3 parameter Helmert shift can be very effective. Even
 though the 3 parameter translation doesn't fit particularly well in large areas
 of use it is still commonly used between legacy and modern systems. In this
-exercise we'll be using a transformation between ED50 in Italy (Sardinia) and
+exercise we will use a transformation between ED50 in Italy (Sardinia) and
 WGS84.
 
 
@@ -82,12 +81,12 @@ Hints:
     - Remember to specify the rotation convention with +convention
 
 -------------------------------------------------------------------------------
-#operation   <your answer here>
+
+operation   <your answer here>
 tolerance   1 m
 
 accept      3496723.5936    743251.5442  5264442.2361
 expect      3496639.7297    743156.3657  5264324.9341
-
 
 -------------------------------------------------------------------------------
 
@@ -166,6 +165,5 @@ tolerance   1 mm
 accept      2952736.3768   1360917.6894  5468849.5615       2019.5
 expect      2952736.3744   1360917.6871  5468849.5586       2019.5
 -------------------------------------------------------------------------------
-
 
 </gie>
