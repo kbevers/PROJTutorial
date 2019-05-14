@@ -59,6 +59,7 @@ expect      1351962.01          298663.54
 
 accept      24.745              59.437  # Tallinn
 expect      1371811.19          218598.22
+
 -------------------------------------------------------------------------------
 
 
@@ -92,12 +93,15 @@ Hints:
     - Look for the lines displaying the meridian and parallel scale.
     - Consult the LCC documentation to find out how to set the scaling factor.
     - Scaling factors usually deviates from unity by the order of 1e-3 to 1e-5
+
 ------------------------------------------------------------------------------
+
 operation   <your answer here>
 tolerance   1 um
 
 accept      24.745              59.437
 expect      1371783.759883408	218593.850591891
+
 ------------------------------------------------------------------------------
 
 
@@ -109,12 +113,15 @@ Hints:
 
     - Approximate location of Helsinki:     60.171N 24.938E
     - Approximate location of Talinn:       59.437N 24.745E
+
 -------------------------------------------------------------------------------
+
 operation   <your answer here>
 tolerance   1 cm
 
 accept      24.8                59.8
 expect      1359907.80          8024082.260
+
 ------------------------------------------------------------------------------
 
 
@@ -132,11 +139,13 @@ Hints:
     - The LCC documentation explains how to change the projection center
 
 ------------------------------------------------------------------------------
+
 operation   <your answer here>
 tolerance   1 cm
 
 accept      24.8            59.8
 expect       0.0             0.0
+
 ------------------------------------------------------------------------------
 
 
@@ -150,12 +159,15 @@ expect       0.0             0.0
 Hints:
 
     - The LCC documentation explains how to set false easting/northing
+
 ------------------------------------------------------------------------------
+
 operation   <your answer here>
 tolerance   1 cm
 
 accept      24.8            59.8
 expect      1000000.00      1000000.00
+
 ------------------------------------------------------------------------------
 
 </gie>
