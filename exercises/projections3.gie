@@ -89,6 +89,10 @@ Hints:
 
     - gie accepts most common SI unit prefixes to the meter when specifying
       the tolerance, e.g. km, m, dm, cm, mm, um, nm.
+
+    - Look at the output gie produces - the difference between the actual result
+      and the expected result is reported when tests fail.
+
 -------------------------------------------------------------------------------
 
 
