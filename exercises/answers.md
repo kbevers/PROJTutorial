@@ -68,3 +68,13 @@ Meditations:
 3b.     +proj=helmert +x=582 +y=105 +z=414 +rx=1.04 +ry=0.35 +rz=-3.08 +s=8.3
 4.      +proj=helmert   +convention=position_vector +x=-0.0016  +y=-0.0019  +z=-0.0024 +s=2e-05 +dz=0.0001 +ds=-3e-05 +t_epoch=2010
 ```
+
+##Conversions:
+
+```
+
+1.      +proj=unitconvert +xy_in=m  +xy_out=us-ft
+2.      +proj=axisswap +order=2,1
+3.      +proj=cart +ellps=intl
+```
+
