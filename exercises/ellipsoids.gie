@@ -6,8 +6,8 @@ In this exercise we will introduce some of the many ways one can specify the
 ellipsoid model used in projections and transformations.
 
 We will be using the Mercator projection to illustrate the different ellipsoid
-settings, but note thet the same parameter settings can be used for setting
-the ellipsoid used for all PROJ projections and most PROJ transformations.
+settings, but note that the same parameter settings can be used for setting
+the ellipsoid used for most PROJ projections and transformations.
 
 ###############################################################################
 <gie>
