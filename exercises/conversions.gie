@@ -1,5 +1,3 @@
-<gie>
-
 ###############################################################################
 
                                 Coordinate Conversions
@@ -23,6 +21,7 @@ See [0] for a list of all conversions available in PROJ.
 [0] https://proj4.org/operations/conversions/index.html
 
 ###############################################################################
+<gie>
 
 
 1. Unit conversion from meters to feet
@@ -38,7 +37,7 @@ Hints:
 
     - You can use `proj -lu` to learn which units is supported by PROJ.
 
-    - Note that the horizontal, vertical and temporal parts area treated
+    - Note that the horizontal, vertical and temporal parts are treated
       separately by the unit convert operator.
 
 -------------------------------------------------------------------------------
@@ -78,8 +77,8 @@ Hints:
 operation   <your answer here>
 tolerance   1 mm
 
-accept      140.0   75.0    # somewhere in Siberia
-expect      75.0    140.0
+accept      140.0     75.0    # somewhere in Siberia
+expect       75.0    140.0
 
 -------------------------------------------------------------------------------
 
@@ -101,7 +100,9 @@ Hints:
       https://proj4.org/operations/conversions/cart.html
 
     - Remember that `proj -le` returns a list of available ellipsoid models
-
+	
+	- Remember that the Hayford ellipsoid is known under a number of other
+	  names - most of them including the term "international".
 
 -------------------------------------------------------------------------------
 
@@ -112,7 +113,6 @@ accept      24.745          59.437          0  # Talinn, Estonia
 expect      2952883.7000    1360985.5908    5468966.6589
 
 -------------------------------------------------------------------------------
-
 
 
 </gie>
