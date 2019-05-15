@@ -1,0 +1,13 @@
+<gie>
+
+1. Set up an operation that returns the input it is given
+-------------------------------------------------------------------------------
+operation   <your answer here>
+tolerance   10 mm
+
+accept      12.3    45.6
+expect      12.3    45.6
+-------------------------------------------------------------------------------
+
+
+</gie>
