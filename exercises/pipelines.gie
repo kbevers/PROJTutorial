@@ -3,7 +3,7 @@
                             Transformation Pipelines
 
 In these exercises we will learn how to use Transformation Pipelines.
-Transformation Pipelines is a powerful contruct in PROJ that allow users to
+Transformation Pipelines is a powerful construct in PROJ that allow users to
 combine several operations into one "super operation". Pipelines are used
 extensively internally in PROJ when a user asks for a transformation between
 two CRS's (for example when using cs2cs).  However, users can also write their
@@ -22,23 +22,31 @@ govern the use of the pipeline operation.
 
 1. Geodetic -> Helmert -> Geodetic
 -------------------------------------------------------------------------------
-One of the most common use cases of transformation pipelines is to apply a
-Helmert transformation on geodetic coordinates. As we have seen in previous
-exercises, the Helmert operation works on cartesian coordinates. Hence we need
-to first convert the geodetic coordinates to cartesian space before the Helmert
-transformation can be applied. Similarly, we need to convert the transformed
-cartesian coordinate back to geodetic space to be able to compare the before
-and after coordinates.
 
-Create a transformation pipeline that take geodetic (longitude/latitude)
-coordinates, applies a Helmert transform and returns geodetic coordinates. We
-will keep it simply and use the GRS80 ellipsoid and a simple 3 parameter
-Helmert with translations 100,200,300 using the position vector convention.
+The signature use case for transformation pipelines is the Helmert
+transformation of geodetic coordinates.
+
+As we have seen in the previous exercises, fundamentally, the Helmert
+operation works on cartesian coordinates. So when the input coordinates
+are geodetic, we must convert them to the cartesian space before
+applying the Helmert transformation.
+
+Similarly, we must convert the transformed cartesian coordinates back to
+geodetic space to be able to compare the coordinates before and after
+transformation.
+
+With that in mind, now create a transformation pipeline that take geodetic
+(longitude/latitude) coordinates, applies a Helmert transform, and returns
+geodetic coordinates (in a different datum).
+
+To keep it simple we will use the GRS80 ellipsoid for both input and output
+datum, and a basic 3 parameter transformation, with translations 100,200,300,
+and using the position vector convention.
 
 Hints:
 
-    - Rember that the inverse of an operation can be toggled by +inv in a
-      pipeline step.
+    - Remember that in a pipeline step, the inverse of an operation is
+      selected by adding "+inv" to the parameter list of the operation.
 
 -------------------------------------------------------------------------------
 
@@ -79,12 +87,17 @@ expect      11.99846399     52.99852627 34.541488647
 3. ED50/UTM32 -> ETRS89/UTM33
 -------------------------------------------------------------------------------
 A transformation from one coordinate reference system to another. A very common
-use case of transformation pipelines. In this exercise we have UTM Zone 32
-coordinates related to the ED50 datum which we want to transform to UTM Zone 33
-related to ETRS89. The transformation goes back-projection -> cartesian
-conversion -> Helmert transformation -> cartesian to geodetic conversion ->
-projection: A common recipe for transformations between projected coordinate
-systems.
+use case of transformation pipelines.
+
+In this exercise we have UTM Zone 32 coordinates related to the ED50 datum,
+which we want to transform to UTM Zone 33 related to ETRS89.
+
+The transformation goes:
+
+back-projection -> geodetic to cartesian conversion -> Helmert transformation ->
+cartesian to geodetic conversion -> re-projection
+
+... a very common recipe for transformations between projected coordinate systems.
 
 Hints:
 
