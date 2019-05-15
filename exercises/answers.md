@@ -109,7 +109,7 @@ Meditations:
         shift first.
 
 3.      +proj=pipeline
-        +step +inv +proj=utm +zone=32
+        +step +inv +proj=utm +zone=32 +ellps=intl
         +step +proj=cart +ellps=intl
         +step +proj=helmert +x=-81.1 +y=-89.4 +z=-115.8
             +rx=0.485 +ry=0.024 +rz=0.413 +s=-0.54 +convention=position_vector

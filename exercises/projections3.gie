@@ -101,6 +101,10 @@ Hints:
     - Look at the output gie produces - the difference between the actual result
       and the expected result is reported when tests fail.
 
+    -  The coordinate used in all exercises below is that of Daneborg in
+       Greenland. The correct UTM zone for that location is zone 27. Remember
+       that a UTM zone is 6 degrees wide.
+
 -------------------------------------------------------------------------------
 
 -------------------------------------------------------------------------------
