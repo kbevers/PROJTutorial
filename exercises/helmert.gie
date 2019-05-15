@@ -150,6 +150,9 @@ Hints:
 
     - Not all parameters need to be set.
 
+    - Pay attention to the units of the parameteres output by projinfo,
+      you may have to convert them to standard units (e.g. mm -> m).
+
     - Note that the coordinates in the test now also includes a time tag in the
       form of a decimalyear - This is always needed when doing spatiotemporal
       transformations in PROJ. The time tag is the observation time of the

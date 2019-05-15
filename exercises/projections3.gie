@@ -90,6 +90,9 @@ For all the exercises below the aim is to find the lowest tolerance for each
 roundtrip test. You can of course make alle tests pass by setting a tolerance of
 1000 km - that's not the point: How low can you go?
 
+After you have answered all ex. 3 questions below, based on your findings
+consider in which situation use of each of the algorithms is  appropriate.
+
 Hints:
 
     - gie accepts most common SI unit prefixes to the meter when specifying
@@ -104,9 +107,11 @@ Hints:
 
 * 3a. As a baseline, determine the roundtrip accuracy of the default algorirthm
       using UTM zone 22:
+
 -------------------------------------------------------------------------------
 operation   +proj=utm +zone=22
-tolerance   <your answer here>
+tolerance   <your answer here>  # Hint: You can go *very* low here
+
 
 accept      -20.0   74      # Daneborg, Greenland (~30 degrees from central meridian)
 roundtrip   1000
