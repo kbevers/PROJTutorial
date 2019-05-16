@@ -1,6 +1,68 @@
+# Install PROJ
+
+We will be using the `conda` command line system to install and run PROJ
+in. In short, `conda` let's you install and update various command line
+tools in an easy way. You need the following two files to get started:
+
+* `Miniconda2-4.5.12-Windows-x86_64.exe`
+* `proj4-6.0.0-ha7a8c7b_0.tar.bz2`
+
+These are provided on the memory stick that has been handed out.
+
+In case your are not installing this on Windows, you need to download the correct
+installers for your system. Find the Miniconda installer [here](https://repo.continuum.io/miniconda/) and the PROJ package [here](https://anaconda.org/conda-forge/proj4/files). The installation steps below will
+also be different but the overall workflow is the same. Chances are you can
+work things out by yourself (it's not that complicated).
+
+Installation steps:
+
+1. Run the installer
+2. When asked, select "Just Me" (the default option)
+3. The default installation folder is fine, continue
+4. Finish the installation
+
+After the installation is done open the "Anaconda Prompt" from the Windows start menu.
+When the prompt is open, enter the command
+
+    conda install C:\proj4-6.0.0-ha7a8c7b_0.tar.bz2
+
+Wait a bit until the installation is finished. Once the installation is over you can try
+issueing a PROJ command:
+
+    projinfo ETRS89
+
+which should result in output similar to:
+
+    PROJ.4 string:
+    +proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs +type=crs
+
+    WKT2_2018 string:
+    GEOGCRS["ETRS89",
+        DATUM["European Terrestrial Reference System 1989",
+            ELLIPSOID["GRS 1980",6378137,298.257222101,
+                LENGTHUNIT["metre",1]]],
+        PRIMEM["Greenwich",0,
+            ANGLEUNIT["degree",0.0174532925199433]],
+        CS[ellipsoidal,2],
+            AXIS["geodetic latitude (Lat)",north,
+                ORDER[1],
+                ANGLEUNIT["degree",0.0174532925199433]],
+            AXIS["geodetic longitude (Lon)",east,
+                ORDER[2],
+                ANGLEUNIT["degree",0.0174532925199433]],
+        USAGE[
+            SCOPE["unknown"],
+            AREA["Europe - ETRS89"],
+            BBOX[32.88,-16.1,84.17,40.18]],
+        ID["EPSG",4258]]
+
+
 # How to fill out the PROJ tutorial exercises
 
 All the exercises are made as `gie` tests where one or more inputs are missing.
+gie files are plain text files which you can edit in your favorite text editor.
+If you don't have a favorite text editor you can use notepad, it is fine for this!
+
 Replace occurrences of `<your answer here>` with the relevant input. Below
 is an annotated example of a complete gie test. Your objective is to fill out
 the exercises from 1 and onwards in a similar fashion.
