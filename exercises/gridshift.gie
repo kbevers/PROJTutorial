@@ -19,7 +19,7 @@ given transformation. The PROJ package requires that the proj-datumgrid package
 grid packages [1][2][3][4], each including most of the freely redistributable
 grids available from geodetic authorities in those regions.
 
-[0] https://proj4.org/resource_files.html
+[0] https://proj.org/resource_files.html
 [1] https://github.com/OSGeo/proj-datumgrid/tree/master/europe#proj-datumgrid-europe
 [2] https://github.com/OSGeo/proj-datumgrid/tree/master/north-america#proj-datumgrid-north-america
 [3] https://github.com/OSGeo/proj-datumgrid/tree/master/oceania#proj-datumgrid-oceania
@@ -75,7 +75,7 @@ using the EGM96 model.
 Hints:
 
     - Consult the documentation to find out how to set up the transformation:
-      https://proj4.org/operations/transformations/vgridshift.html
+      https://proj.org/operations/transformations/vgridshift.html
 
     - The relevant grid name is "egm96_15.gtx"
 

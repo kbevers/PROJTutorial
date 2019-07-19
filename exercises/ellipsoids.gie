@@ -18,7 +18,7 @@ the ellipsoid used for most PROJ projections and transformations.
 Hints:
 
   * Check the Mercator documentation to find out how to specify an ellipsoid:
-    https://proj4.org/operations/projections/merc.html
+    https://proj.org/operations/projections/merc.html
 -------------------------------------------------------------------------------
 
 operation   +proj=merc  <your answer here>
@@ -35,7 +35,7 @@ expect      0.4319          1.2975
 Hints:
 
   * Check the Mercator documentation to find out how to specify an ellipsoid:
-    https://proj4.org/operations/projections/merc.html
+    https://proj.org/operations/projections/merc.html
 
   * Running `proj -le` will return a list of ellipsoids and their parameters.
 -------------------------------------------------------------------------------

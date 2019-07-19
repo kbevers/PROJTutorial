@@ -18,7 +18,7 @@ true power. We will explore that further in the pipelines.gie exercises.
 
 See [0] for a list of all conversions available in PROJ.
 
-[0] https://proj4.org/operations/conversions/index.html
+[0] https://proj.org/operations/conversions/index.html
 
 ###############################################################################
 <gie>
@@ -33,7 +33,7 @@ from meters to feet.
 Hints:
 
     - Consult the documentation to find out how to set up the transformation:
-      https://proj4.org/operations/conversions/unitconvert.html
+      https://proj.org/operations/conversions/unitconvert.html
 
     - You can use `proj -lu` to learn which units is supported by PROJ.
 
@@ -66,7 +66,7 @@ latitude/longitude form.
 Hints:
 
     - Consult the documentation to find out how to set up the transformation:
-      https://proj4.org/operations/conversions/axisswap.html
+      https://proj.org/operations/conversions/axisswap.html
 
     - Remember that the axisswap operation doesn't know anything about the
       nature of the coordinate that is passed to it - it only cares about the
@@ -97,10 +97,10 @@ geocentric coordinates on the Hayford ellipsoid.
 Hints:
 
     - Consult the documentation to find out how to set up the transformation:
-      https://proj4.org/operations/conversions/cart.html
+      https://proj.org/operations/conversions/cart.html
 
     - Remember that `proj -le` returns a list of available ellipsoid models
-	
+
 	- Remember that the Hayford ellipsoid is known under a number of other
 	  names - most of them including the term "international".
 

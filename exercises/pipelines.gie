@@ -14,7 +14,7 @@ operation in the documentation [0]. Pay special attention to the rules that
 govern the use of the pipeline operation.
 
 
-[0] https://proj4.org/operations/pipeline.html
+[0] https://proj.org/operations/pipeline.html
 
 ###############################################################################
 <gie>
@@ -70,8 +70,8 @@ Hints:
 
     - Relevant documentation:
 
-        https://proj4.org/operations/transformations/hgridshift.html
-        https://proj4.org/operations/transformations/vgridshift.html
+        https://proj.org/operations/transformations/hgridshift.html
+        https://proj.org/operations/transformations/vgridshift.html
 
 -------------------------------------------------------------------------------
 
@@ -112,9 +112,9 @@ Hints:
 
     - Relevant documentation:
 
-        https://proj4.org/operations/projections/utm.html
-        https://proj4.org/operations/conversions/cart.html
-        https://proj4.org/operations/transformations/helmert.html
+        https://proj.org/operations/projections/utm.html
+        https://proj.org/operations/conversions/cart.html
+        https://proj.org/operations/transformations/helmert.html
 
 -------------------------------------------------------------------------------
 
@@ -154,8 +154,8 @@ Hints:
         projinfo <CRS name or code>
 
     - Consult the documentation to find out how to set up the transformation:
-        https://proj4.org/operations/conversions/push.html
-        https://proj4.org/operations/conversions/pop.html
+        https://proj.org/operations/conversions/push.html
+        https://proj.org/operations/conversions/pop.html
 
 -------------------------------------------------------------------------------
 

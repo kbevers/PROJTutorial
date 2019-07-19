@@ -15,7 +15,7 @@ transformation setup.
 
 
 [0] https://en.wikipedia.org/wiki/Helmert_transformation
-[1] https://proj4.org/operations/transformations/helmert.html
+[1] https://proj.org/operations/transformations/helmert.html
 
 ###############################################################################
 <gie>
@@ -46,7 +46,7 @@ Hints:
       coordinates (x, y z).
 
     - Consult the documentation to find out how to set up the transformation:
-      https://proj4.org/operations/transformations/helmert.html
+      https://proj.org/operations/transformations/helmert.html
 
 -------------------------------------------------------------------------------
 

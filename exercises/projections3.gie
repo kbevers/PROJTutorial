@@ -18,7 +18,7 @@ favour of the other.
 Hints:
 
   * Consult the documentation at
-    https://proj4.org/operations/projections/tmerc.html
+    https://proj.org/operations/projections/tmerc.html
 
 -------------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ Hints:
       https://proj4.org/operations/projections/tmerc.html
 
     - For more info, see
-      * https://proj4.org/operations/projections/utm.html
+      * https://proj.org/operations/projections/utm.html
       * https://en.wikipedia.org/wiki/Universal_Transverse_Mercator_coordinate_system
 
 -------------------------------------------------------------------------------

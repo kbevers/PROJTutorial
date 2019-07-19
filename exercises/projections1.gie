@@ -15,7 +15,7 @@ to use a different ellipsoid than the default (GRS80).
 Hints:
 
   * Consult the documentation at
-    https://proj4.org/operations/projections/utm.html
+    https://proj.org/operations/projections/utm.html
 -------------------------------------------------------------------------------
 
 operation   <your answer here>
@@ -33,7 +33,7 @@ expect      372106.37       6590881.40
 Hints:
 
   * Consult the documentation at
-    https://proj4.org/operations/projections/utm.html
+    https://proj.org/operations/projections/utm.html
 
 -------------------------------------------------------------------------------
 
@@ -52,7 +52,7 @@ expect      298481.34       5920382.04
 Hints:
 
   * Consult the documentation at
-    https://proj4.org/operations/projections/utm.html
+    https://proj.org/operations/projections/utm.html
 
   *  A list of available ellipsoids can be seen by running the command:
 

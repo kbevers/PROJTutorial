@@ -2,17 +2,11 @@
 
 We will be using the `conda` command line system to install and run PROJ
 in. In short, `conda` let's you install and update various command line
-tools in an easy way. You need the following two files to get started:
+tools in an easy way.You need to download the correct installers for your system. Find the Miniconda installer
+[here](https://repo.continuum.io/miniconda/).
 
-* `Miniconda2-4.5.12-Windows-x86_64.exe`
-* `proj4-6.0.0-ha7a8c7b_0.tar.bz2`
-
-These are provided on the memory stick that has been handed out.
-
-In case your are not installing this on Windows, you need to download the correct
-installers for your system. Find the Miniconda installer [here](https://repo.continuum.io/miniconda/) and the PROJ package [here](https://anaconda.org/conda-forge/proj4/files). The installation steps below will
-also be different but the overall workflow is the same. Chances are you can
-work things out by yourself (it's not that complicated).
+This guide will demonstrate how to make the installation on Windows but
+the steps are similar on other systems as well.
 
 Installation steps:
 
@@ -21,13 +15,13 @@ Installation steps:
 3. The default installation folder is fine, continue
 4. Finish the installation
 
-After the installation is done open the "Anaconda Prompt" from the Windows start menu.
-When the prompt is open, enter the command
+After the installation is done open the "Anaconda Prompt" from the Windows start
+menu. When the prompt is open, enter the command
 
-    conda install C:\proj4-6.0.0-ha7a8c7b_0.tar.bz2
+    conda install proj4 -c conda-forge
 
-Wait a bit until the installation is finished. Once the installation is over you can try
-issueing a PROJ command:
+Wait a bit until the installation is finished. Once the installation is over you
+can try issueing a PROJ command:
 
     projinfo ETRS89
 

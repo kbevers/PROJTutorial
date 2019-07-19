@@ -10,8 +10,8 @@ however, not directly support geodesics, so this exercise will proceed mostly
 by having you copy sample commands from the text onto the command line, and
 copying results from the command line back into this file.
 
-[0] https://proj4.org/geodesic.html
-[1] https://proj4.org/apps/geod.html
+[0] https://proj.org/geodesic.html
+[1] https://proj.org/apps/geod.html
 
 
 ------------------------------------------------------------------------------
