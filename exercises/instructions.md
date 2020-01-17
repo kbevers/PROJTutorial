@@ -18,7 +18,7 @@ Installation steps:
 After the installation is done open the "Anaconda Prompt" from the Windows start
 menu. When the prompt is open, enter the command
 
-    conda install proj4 -c conda-forge
+    conda install proj -c conda-forge
 
 Wait a bit until the installation is finished. Once the installation is over you
 can try issueing a PROJ command:
